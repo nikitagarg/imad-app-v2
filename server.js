@@ -7,23 +7,23 @@ app.use(morgan('combined'));
 
 var articles = {
     'article-one': {
-    title: 'Article One | Nikita Garg',
-    heading: 'Article One',
-    date: 'March 1,2017',
-    content:`
-                <p>
-                    helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
-                    hgj jgj hj .
-                </p>
-                <p>
-                    helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
-                    hgj jgj hj .
-                </p>
-                <p>
-                    hello.!! this is Nikita Garg from Lucknow.lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
-                    hgj jgj hj .
-                </p>`
-},
+        title: 'Article One | Nikita Garg',
+        heading: 'Article One',
+        date: 'March 1,2017',
+        content:`
+                    <p>
+                        helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                        hgj jgj hj .
+                    </p>
+                    <p>
+                        helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                        hgj jgj hj .
+                    </p>
+                    <p>
+                        hello.!! this is Nikita Garg from Lucknow.lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                        hgj jgj hj .
+                    </p>`
+        },
     'article-two': {
     title: 'Article Two | Nikita Garg',
     heading: 'Article Two',
@@ -80,7 +80,7 @@ function createTemplete(data) {
                     <div>
                         <a href='/'>Home</a>
                     </div>
-                    <hr/>
+                    <hr/><hr/>
                     <h3>  ${heading} </h3>
                     <div> ${date} </div>
                     <div>

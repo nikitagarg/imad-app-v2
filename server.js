@@ -76,11 +76,11 @@ function createTemplete(data) {
             </head>
             
             <body>
-                <div class = "containner">
+                <div class = "container">
                     <div>
                         <a href='/'>Home</a>
                     </div>
-                    <hr/><hr/>
+                    <hr/>
                     <h3>  ${heading} </h3>
                     <div> ${date} </div>
                     <div>

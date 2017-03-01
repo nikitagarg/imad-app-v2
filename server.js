@@ -5,6 +5,47 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var  content = {
+    title: 'Article One | Nikita Garg',
+    heading: 'Article One',
+    date: 'March 1,2017',
+    content:`
+                <p>
+                    helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>
+                <p>
+                    helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>
+                <p>
+                    hello.!! this is Nikita Garg from Lucknow.lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>`
+};
+var htmlTemplete= `
+    <html>
+        <head>
+            <title> ${title} </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        </head>
+        
+        <body>
+            <div class="container">
+                <div>
+                    <a href='/'>Home</a>
+                </div>
+                <hr/>
+                <h3>  ${heading} </h3>
+                <div> ${date} </div>
+                <div>
+                    ${content}
+                </div>
+            </div>
+        </body>
+    </html>
+`;
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });

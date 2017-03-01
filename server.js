@@ -23,35 +23,44 @@ var  content = {
                     hgj jgj hj .
                 </p>`
 };
-var htmlTemplete= `
-    <html>
-        <head>
-            <title> ${title} </title>
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        </head>
-        
-        <body>
-            <div class="container">
-                <div>
-                    <a href='/'>Home</a>
+ 
+function createTemplete(data) {
+    var  title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    var htmlTemplete= `
+        <html>
+            <head>
+                <title> ${title} </title>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            </head>
+            
+            <body>
+                <div class="container">
+                    <div>
+                        <a href='/'>Home</a>
+                    </div>
+                    <hr/>
+                    <h3>  ${heading} </h3>
+                    <div> ${date} </div>
+                    <div>
+                        ${content}
+                    </div>
                 </div>
-                <hr/>
-                <h3>  ${heading} </h3>
-                <div> ${date} </div>
-                <div>
-                    ${content}
-                </div>
-            </div>
-        </body>
-    </html>
-`;
+            </body>
+        </html>
+    `;
+    return htmlTemplete;
+}
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one',function(req,res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createTemplete(articleOne));
 });
 
 app.get('/article-two',function(req,res) {

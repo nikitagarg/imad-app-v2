@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+    articleOne: {
     title: 'Article One | Nikita Garg',
     heading: 'Article One',
     date: 'March 1,2017',
@@ -22,7 +23,46 @@ var articleOne = {
                     hello.!! this is Nikita Garg from Lucknow.lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
                     hgj jgj hj .
                 </p>`
-};
+},
+articleTwo: {
+    title: 'Article Two | Nikita Garg',
+    heading: 'Article Two',
+    date: 'March 2,2017',
+    content:`
+                <p>
+                    helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>
+                <p>
+                    helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>
+                <p>
+                    hello.!! this is Nikita Garg from Lucknow.lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>`
+},
+articleThree: {
+    title: 'Article Three | Nikita Garg',
+    heading: 'Article Three',
+    date: 'March 3,2017',
+    content:`
+                <p>
+                    helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>
+                <p>
+                    helloo.. lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>
+                <p>
+                    hello.!! this is Nikita Garg from Lucknow.lorem epsum tyghkyk. nhijk gjgvvhf..bhggmjk..jgfhgdfhgy ggstgf jjyhgc gdbgu hfh hgb hj mhfh,.
+                    hgj jgj hj .
+                </p>`
+}
+
+}
+
  
 function createTemplete(data) {
     var  title = data.title;

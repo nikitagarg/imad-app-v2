@@ -76,7 +76,7 @@ function createTemplete(data) {
             </head>
             
             <body>
-                <div class= "container">
+                <div class = "containner">
                     <div>
                         <a href='/'>Home</a>
                     </div>

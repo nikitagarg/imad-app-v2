@@ -2,8 +2,8 @@
 console.log("hghhj");
 
 var button = document.getElementById("counter");
-var counter = 0;
-alert();
+//var counter = 0;
+//alert();
 button.onClick = function(){
     alert();
     

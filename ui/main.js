@@ -1,9 +1,9 @@
 //Counter code
 console.log("hghhj");
-alert();
+
 var button = document.getElementById("counter");
 var counter = 0;
-
+alert();
 button.onClick = function(){
     alert();
     

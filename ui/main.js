@@ -22,7 +22,7 @@ button.onclick = function(){
 
 var nameInput = document.getElementById("name");
 var name = nameInput.value;
-var submit = documnt.getElementBy("submitBtn");
+var submit = document.getElementBy("submitBtn");
 submit.onclick = function(){
   var names = ['name1','name2','name3'];
   var list = '';

@@ -6,11 +6,11 @@ var app = express();
 app.use(morgan('combined'));
 
 var config = {
-  host: 'db.imad.hasura-app.io',
-  user: 'nikitagarg',
-  password: process.env.DB_PASSWORD,
-  database: 'nikitagarg',
-  port: '5432',
+    user: 'nikitagarg',
+    database: 'nikitagarg',
+    host: 'db.imad.hasura-app.io',
+    password: process.env.DB_PASSWORD,
+      port: '5432',
 };
 
 

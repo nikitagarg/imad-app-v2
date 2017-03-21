@@ -135,6 +135,7 @@ app.get('/submit-name', function(req,res){
 });
 
 app.get('articles/:articleName',function(req,res) {
+    console.log('sjdsjdjskj');
     //articleName== article-one
     //articles[articleName]=={}content object for article one
     

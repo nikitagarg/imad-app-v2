@@ -10,7 +10,7 @@ var config = {
     database: 'nikitagarg',
     host: 'db.imad.hasura-app.io',
     password: process.env.DB_PASSWORD
-}
+};
 
 var articles = {
     'article-one': {

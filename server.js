@@ -110,6 +110,8 @@ app.get('/', function (req, res) {
 
 function hash (input) {
     
+    salt='s,hjksd';
+    hash.input== crupto(input.,gsalt,hashed)
     
 }
 

@@ -111,7 +111,7 @@ app.get('/', function (req, res) {
 function hash (input, salt) {
     
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return hashed.toString();
+    return hashed.toString('hex');
 }
 
 
@@ -122,7 +122,7 @@ app.get('/hash/:input', function(req, res){
 
 app.get('/create-user', function(req, res){
     
-    
+    var dbstring = hash(password, salt);
 });
 
 var pool = new Pool(config)

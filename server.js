@@ -2,16 +2,18 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
-var app = express();
-app.use(morgan('combined'));
 
 var config = {
     user: 'nikitagarg',
     database: 'nikitagarg',
     host: 'db.imad.hasura-app.io',
     port: '5432',
-    password: 'db-nikitagarg-89148'
+    //password: 'db-nikitagarg-89148'
+    password: process.env.DB_PASSWORD
 };
+
+var app = express();
+app.use(morgan('combined'));
 
 var articles = {
     'article-one': {
@@ -101,6 +103,11 @@ function createTemplete(data) {
     `;
     return htmlTemplete;
 }
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
 var pool = new Pool(config)
 app.get('/test-db', function (req, res){
    //make a select request
@@ -112,10 +119,6 @@ app.get('/test-db', function (req, res){
            res.send(JSON.stringify(result.rows));
        }
    });
-});
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 var counter=0;
